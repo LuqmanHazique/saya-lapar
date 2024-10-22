@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Consultant</title>
+
+</head>
+<body>
+    <center>
+        <h1>Hello Good Morning, Sir</h1>
+        <p>Please provide your username and password</p>
+        <form onsubmit="return auth()">
+            <h2>Login</h2>
+            <label for="username">Username</label>
+            <input type="text" placeholder="username" id="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="password" id="password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+
+        <script>
+            function auth() {
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                // Check credentials
+                if (username === 'isyraff' && password === '209905') {
+                    // Redirect to another page upon successful login
+                    window.open('page2.html','_blank'); // Change 'page2.html' to the desired page
+                    alert("Login successfully");
+                } else {
+                    alert("Invalid information");
+                    return false; // Prevent form submission if login fails
+                }
+            }
+        </script>
+
+        <a href="page1.html">About me</a>
+    </center>
+</body>
+</html>
+
